@@ -1,25 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
-:root {
-  --main-color: #13168d;
-  --secondary-color: #393a57;
-  --ternary-color: #486ba6;
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --background-color: #e5e6ed;
-  --background-secondary-color: #fff;
-  --border-color: #80717f;
-  --border-secondary-color: #bcc0cb;
-  --plus-color: #2ecc71;
-  --minus-color: #c0392b;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--secondary-color);
+  background-color: #e5e6ed;
+  color: #393a57;
   font-family: "Noto Sans", sans-serif;
   display: flex;
   flex-direction: column;
@@ -36,7 +23,6 @@ body {
 }
 
 .header img {
-  width: 4.5rem;
   width: 4.5rem;
   opacity: 0.5;
 }
@@ -66,7 +52,7 @@ h2 {
 }
 
 h3 {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #80717f;
   padding-bottom: 10px;
   margin: 40px 0 10px;
 }
@@ -78,8 +64,8 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: var(--background-secondary-color);
-  box-shadow: var(--box-shadow);
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -93,7 +79,7 @@ h4 {
 }
 
 .inc-exp-container > div:first-of-type {
-  border-right: 1px solid var(--border-secondary-color);
+  border-right: 1px solid #bcc0cb;
 }
 
 .money {
@@ -103,11 +89,11 @@ h4 {
 }
 
 .money.plus {
-  color: var(--plus-color);
+  color: #2ecc71;
 }
 
 .money.minus {
-  color: var(--minus-color);
+  color: #c0392b;
 }
 
 label {
@@ -117,7 +103,7 @@ label {
 
 input[type="text"],
 input[type="number"] {
-  border: 1px solid var(--border-secondary-color);
+  border: 1px solid #bcc0cb;
   border-radius: 5px;
   display: block;
   font-size: 16px;
@@ -127,9 +113,9 @@ input[type="number"] {
 
 .btn {
   cursor: pointer;
-  background-color: var(--main-color);
-  box-shadow: var(--box-shadow);
-  color: var(--background-secondary-color);
+  background-color: #13168d;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #fff;
   border: 0;
   display: block;
   font-size: 16px;
@@ -146,9 +132,9 @@ input[type="number"] {
 }
 
 .list li {
-  background-color: var(--background-secondary-color);
-  box-shadow: var(--box-shadow);
-  color: var(--ternary-color);
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #486ba6;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -159,18 +145,18 @@ input[type="number"] {
 }
 
 .list li.plus {
-  border-left: 5px solid var(--plus-color);
+  border-left: 5px solid #2ecc71; 
 }
 
 .list li.minus {
-  border-left: 5px solid var(--minus-color);
+  border-left: 5px solid #c0392b;
 }
 
 .delete-btn {
   cursor: pointer;
-  background-color: var(--minus-color);
-  color: var(--background-secondary-color);
-  box-shadow: var(--box-shadow);
+  background-color: #c0392b;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border: 0;
   font-size: 22px;
   line-height: 22px;
@@ -194,8 +180,8 @@ input[type="number"] {
 }
 
 .notification-container {
-  background-color: var(--minus-color);
-  color: var(--background-secondary-color);
+  background-color: #c0392b;
+  color: #fff;
   border-radius: 5px 5px 0 0;
   padding: 15px 20px;
   position: fixed;
