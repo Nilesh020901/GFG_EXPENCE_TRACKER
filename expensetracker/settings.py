@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6kkmiw&+klj9ww$%(t@)on34(87e8act5btj4=r)o2^%(!rhsg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -69,6 +69,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'expensetracker.wsgi.application'
+
+
 
 
 # Database
