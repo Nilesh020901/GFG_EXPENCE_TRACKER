@@ -3,7 +3,8 @@ from .models import TrackingHistory, CurrentBalance
 from django.db.models import Sum
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 def login_view(request):
     if request.method == "POST":
@@ -47,7 +48,7 @@ def register_view(request):
     return render(request , 'register.html')
 
 
-
+@login_required(login_url = "login_view")
 def index(request):
     if request.method=="POST":
         description = request.POST.get('description')
@@ -87,7 +88,7 @@ def index(request):
     context = {'income' : income, 'expense' : expense, 'transactions' : TrackingHistory.objects.all(), 'current_balance' : current_balance}
     return render(request, 'index.html', context)
 
-
+@login_required(login_url = "login_view")
 def delete_transaction(request, id):
     tracking_history = TrackingHistory.objects.filter(id = id)
 
@@ -100,4 +101,8 @@ def delete_transaction(request, id):
 
     tracking_history.delete()
     return redirect('/')
+
+def logout_view(request):
+    logout(request)
+    return redirect('/login/')
 
